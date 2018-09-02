@@ -7,42 +7,13 @@
             <h1><a href="/">Asif's Blog</a></h1>
         </div>
 
+        {% for post in posts %}
         <div>
-            <p>pubished 1.09.2018 11.43</p>
-            <h2><a href="">the first post</a></h2>
-            <p>this is special post. I want to do more than this. i am suppossed
-               to do more than this. i have promised to do more than this. i have 
-               a lot of latent talent. i will do my level best to acheive what i 
-               am supposed to do. i always have the intend. what i lack is the 
-               effort and success. i will have it. more or less every one goes 
-               through rough patches. i don't know whether i have been given an 
-               oppurtunity or .... i will have to try more satisfactorily and 
-               take the pressure of myself. i will do my best. i have to. 
-               there is no going back. smoothness is only a perception. sometimes
-               a hard ride is perfect for you. keep in mind that you are not like 
-               every one else. you have the ability to adapt and adjust to any 
-               situation beautifully.
-            </p>
+            <p>published: {{ post.published_date }}</p>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
         </div>
-        <div>
-            <p>published 1.09.2018 11.53</p>
-            <h3><a href="">The Second Post</a></h3>
-            <p>10 minutes on, I am writing my second post in my own blog that I have 
-               created for myself. Thanks to django girls for the tutorial. You have 
-               made django look easy. The style in which you have written down the 
-               tutorial is awesome, I appreciate it with my heart. This is not the 
-               end whatsoever. I have to build cryptocurrency exchanges, cryptocurrency
-               wallets and lord knows even my own cryptocurrencies. I have used on 
-               third party codes to implement the same things and very successful in 
-               that as well. I have been told to create nodes of cryptocurrencies, use 
-               the custom apis to get data out of the blockchain and write corresponding
-               backends to show the data and even alow cryptocurrecy transactions. I 
-               haven't built a static website for myself in all these years. I dont have
-               enough experience in writing backends in whatever language be it. I have 
-               very small idea about how coding works. But let me say i have the intend 
-               and fire to do every thing i have said above myself. I hope i will be given
-               time and health to acheive all i want to do.
-            </p>
-        </div>
+        {% endfor %}
+        
     </body>
 </html>
